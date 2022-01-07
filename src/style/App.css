@@ -1,0 +1,78 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.fixedMenu {
+  position: fixed;
+  top: 0;
+  width: inherit;
+  z-index: 101;
+}
+
+.homeImg {
+  margin-top: 20px;
+}
+
+.intro {
+  background: #00acac;
+  background: radial-gradient(circle, #00acac 0%, #00a2a2 25%, #007070 61%, #015959 100%);
+  height: calc(100vh - 20px);
+}
+
+.headerIntro {
+  position: relative;
+  top: -50px;
+}
+
+.fa-angle-double-down {
+  color: #e3f2fd;
+  -webkit-animation: upanddown 2s linear infinite;
+          animation: upanddown 2s linear infinite;
+}
+
+@-webkit-keyframes upanddown {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+}
+
+@keyframes upanddown {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+}
+
+.test1 {
+  outline: solid red 3px;
+}
+
+.sidefix {
+  height: 100px !important;
+  outline: solid 2px red;
+  background: teal !important;
+}
+
+.test {
+  position: -webkit-sticky;
+  position: sticky;
+  height: 200px;
+  width: 100px;
+  border: solid red 3px;
+  left: 400px;
+}
+/*# sourceMappingURL=App.css.map */

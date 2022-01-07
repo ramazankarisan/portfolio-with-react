@@ -1,0 +1,48 @@
+@import "./_reset.scss";
+@import "./mixins.scss"; // menu fixing
+.fixedMenu {
+    position: fixed;
+    top: 0;
+    width: inherit;
+    z-index: 101;
+}
+// home-intro img
+.homeImg {
+    margin-top: 20px;
+}
+// intro
+.intro {
+    background: rgb(0, 172, 172);
+    background: radial-gradient(
+        circle,
+        rgba(0, 172, 172, 1) 0%,
+        rgba(0, 162, 162, 1) 25%,
+        rgba(0, 112, 112, 1) 61%,
+        rgba(1, 89, 89, 1) 100%
+    );
+    height: calc(100vh - 20px);
+}
+.headerIntro {
+    position: relative;
+    top: -50px;
+}
+.fa-angle-double-down {
+    color: #e3f2fd;
+    @include upanddown;
+}
+.test1 {
+    outline: solid red 3px;
+}
+// ---
+.sidefix {
+    height: 100px !important;
+    outline: solid 2px red;
+    background: teal !important;
+}
+.test {
+    position: sticky;
+    height: 200px;
+    width: 100px;
+    border: solid red 3px;
+    left: 400px;
+}

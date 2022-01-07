@@ -1,0 +1,12 @@
+@mixin upanddown {
+    animation: upanddown 2s linear infinite;
+    @keyframes upanddown {
+        0% {
+            transform: translateY(0px);
+        }
+
+        50% {
+            transform: translateY(20px);
+        }
+    }
+}
