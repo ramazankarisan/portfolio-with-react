@@ -14,6 +14,23 @@
   z-index: 101;
 }
 
+.navbarCont {
+  background: whitesmoke;
+  height: 70px;
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 101;
+}
+
+.menuHome {
+  position: fixed;
+  top: 40%;
+  width: 120px !important;
+  outline: solid red 2px;
+}
+
 .homeImg {
   margin-top: 20px;
 }
@@ -21,7 +38,8 @@
 .intro {
   background: #00acac;
   background: radial-gradient(circle, #00acac 0%, #00a2a2 25%, #007070 61%, #015959 100%);
-  height: calc(100vh - 20px);
+  height: calc(100vh - 60px);
+  margin-top: 60px !important;
 }
 
 .headerIntro {
@@ -57,22 +75,33 @@
   }
 }
 
-.test1 {
-  outline: solid red 3px;
+.aboutMe {
+  background: #d76c00;
+  background: radial-gradient(circle, #d76c00 0%, #d16900 25%, #b05800 61%, #964b00 100%);
 }
 
-.sidefix {
-  height: 100px !important;
-  outline: solid 2px red;
-  background: teal !important;
+.avatarImg {
+  padding: 5px !important;
 }
 
-.test {
-  position: -webkit-sticky;
-  position: sticky;
-  height: 200px;
-  width: 100px;
-  border: solid red 3px;
-  left: 400px;
+.aboutMeCard {
+  padding: 5px !important;
+}
+
+.serviceList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.listDesc {
+  text-align: left;
 }
 /*# sourceMappingURL=App.css.map */

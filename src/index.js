@@ -2,15 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';
-import SidebarState from './context/sidebar/SidebarState';
+import HomeState from './context/sidebar/HomeState';
+
 
 
 
 ReactDOM.render(
   <BrowserRouter>
-    <SidebarState>
+    <HomeState>
       <App />
-    </SidebarState>
+    </HomeState>
   </BrowserRouter>
   ,
   document.getElementById('root')

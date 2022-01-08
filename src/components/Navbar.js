@@ -1,18 +1,21 @@
 import React, { useContext } from 'react'
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Button, Dropdown, Grid, Menu, } from 'semantic-ui-react'
-import sidebarContext from '../context/sidebar/sidebarContext'
+import homeContext from '../context/sidebar/homeContext';
+
 
 
 
 const Navbar = () => {
-  const { dispatch, handleClick } = useContext(sidebarContext);
+  const { dispatch, handleClick } = useContext(homeContext);
   return (
     <>
-      <Grid style={{ 'margin-bottom': 40 }}>
-        <Grid.Row centered>
-          <Grid.Column width={10}  >
-            <Menu className='fixedMenu'>
+      <Grid stackable
+      // style={{ 'margin-bottom': 60 }}
+      >
+        <Grid.Row centered className='navbarCont ' >
+          <Grid.Column mobile={16} computer={10}  >
+            <Menu className='fixedMenu '  >
               <Menu.Item>
 
                 <Button onClick={() => handleClick()} circular icon="home" color='teal' size='big' >

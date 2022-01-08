@@ -1,7 +1,7 @@
 import '../src/style/App.scss';
 import 'semantic-ui-css/semantic.min.css'
 import Navbar from './components/Navbar';
-import SidebarHome from './components/SidebarHome';
+import Home from './components/Home';
 
 
 
@@ -11,7 +11,7 @@ function App() {
     <>
 
       <Navbar />
-      <SidebarHome />
+      <Home />
 
 
     </>

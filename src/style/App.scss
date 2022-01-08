@@ -1,16 +1,36 @@
 @import "./_reset.scss";
-@import "./mixins.scss"; // menu fixing
+@import "./mixins.scss";
+
+// menu fixing ------------------------------
 .fixedMenu {
     position: fixed;
     top: 0;
     width: inherit;
     z-index: 101;
 }
-// home-intro img
+.navbarCont {
+    background: whitesmoke;
+    height: 70px;
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 101;
+}
+// menuHome fixed
+.menuHome {
+    position: fixed;
+    top: 40%;
+    width: 120px !important;
+    outline: solid red 2px;
+}
+
+// home-intro img --------------------------------------
 .homeImg {
     margin-top: 20px;
 }
-// intro
+
+// intro---------------------------------
 .intro {
     background: rgb(0, 172, 172);
     background: radial-gradient(
@@ -20,7 +40,8 @@
         rgba(0, 112, 112, 1) 61%,
         rgba(1, 89, 89, 1) 100%
     );
-    height: calc(100vh - 20px);
+    height: calc(100vh - 60px);
+    margin-top: 60px !important;
 }
 .headerIntro {
     position: relative;
@@ -30,19 +51,33 @@
     color: #e3f2fd;
     @include upanddown;
 }
-.test1 {
-    outline: solid red 3px;
+
+// about me --------------------
+.aboutMe {
+    background: rgb(215, 108, 0);
+    background: radial-gradient(
+        circle,
+        rgba(215, 108, 0, 1) 0%,
+        rgba(209, 105, 0, 1) 25%,
+        rgba(176, 88, 0, 1) 61%,
+        rgba(150, 75, 0, 1) 100%
+    );
 }
-// ---
-.sidefix {
-    height: 100px !important;
-    outline: solid 2px red;
-    background: teal !important;
+
+// avatar -------------
+.avatarImg {
+    padding: 5px !important;
 }
-.test {
-    position: sticky;
-    height: 200px;
-    width: 100px;
-    border: solid red 3px;
-    left: 400px;
+// about me card-------------
+.aboutMeCard {
+    padding: 5px !important;
+}
+// sercive list --------------
+.serviceList {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.listDesc {
+    text-align: left;
 }
