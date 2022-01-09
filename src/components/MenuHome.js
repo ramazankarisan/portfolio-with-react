@@ -5,7 +5,7 @@ import homeContext from '../context/sidebar/homeContext'
 
 const MenuHome = () => {
   const { state } = useContext(homeContext);
-  console.log(state.menuShow);
+  console.log(state);
   return (
     <>
       {state.menuShow && <Menu vertical className='menuHome' >

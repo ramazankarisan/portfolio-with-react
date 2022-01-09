@@ -29,6 +29,7 @@
   top: 40%;
   width: 120px !important;
   outline: solid red 2px;
+  z-index: 101;
 }
 
 .homeImg {
@@ -75,7 +76,7 @@
   }
 }
 
-.aboutMe {
+.aboutMe, .conctactSmall {
   background: #d76c00;
   background: radial-gradient(circle, #d76c00 0%, #d16900 25%, #b05800 61%, #964b00 100%);
 }
@@ -103,5 +104,30 @@
 
 .listDesc {
   text-align: left;
+}
+
+.portfolioSmall {
+  background: #00acac;
+  background: radial-gradient(circle, #00acac 0%, #00a2a2 25%, #007070 61%, #015959 100%);
+}
+
+.btn:hover {
+  -webkit-transition: -webkit-transform 0.4s linear !important;
+  transition: -webkit-transform 0.4s linear !important;
+  transition: transform 0.4s linear !important;
+  transition: transform 0.4s linear, -webkit-transform 0.4s linear !important;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  text-shadow: 2px 2px 10px white, -1px -1px 10px white !important;
+}
+
+.github:hover,
+.linkedin:hover {
+  background-color: #5da104 !important;
+}
+
+.facebook:hover,
+.twitter:hover {
+  background-color: #cc0cbc !important;
 }
 /*# sourceMappingURL=App.css.map */

@@ -12,7 +12,7 @@ const Home = () => {
 
   return (
     <>
-      <Grid stackable >
+      <Grid stackable  >
         <Grid.Row  >
           <Grid.Column  >
             <MenuHome />

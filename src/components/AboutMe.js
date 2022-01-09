@@ -6,7 +6,7 @@ import avatar from '../images/avatar.svg'
 const AboutMe = () => {
   return (
     <>
-      <Grid className='aboutMe'>
+      <Grid className='aboutMe' stackable>
         <Grid.Row centered>
           <Grid.Column width={5}>
             <Card className='aboutMeCard'>
