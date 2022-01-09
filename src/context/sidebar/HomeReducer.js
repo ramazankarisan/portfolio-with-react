@@ -3,9 +3,9 @@ export const sidebarReducer = (state, action) => {
     case 'MENU_OPEN':
       return { menuShow: !state.menuShow };
     case 'HANDLE_SHOW':
-      return { ...state, active: true };
+      return { ...state, active: true, [action.payload]: true };
     case 'HANDLE_HIDE':
-      return { ...state, active: false }
+      return { ...state, active: false, [action.payload]: false }
     default:
       return state;
   }

@@ -1,11 +1,12 @@
 import React, { useContext } from 'react'
 import { Button, Card, Dimmer, Header, Icon, Image } from 'semantic-ui-react'
-import homeContext from '../../context/sidebar/homeContext'
-import projectPhoto from '../../images/commentAndPost.png'
+import homeContext from '../../../context/sidebar/homeContext'
+import projectPhoto from '../../../images/buyCart.png'
 
-const SmallEmptyProject = () => {
+const BuyCartRedux = () => {
   const { handleShow, handleHide, state } = useContext(homeContext);
-  const showDimmer = state.active;
+  const showDimmer = state.project2;
+  const name = 'project2'
   const content = (
     <div>
       <Header as='h2' inverted>
@@ -18,16 +19,18 @@ const SmallEmptyProject = () => {
   return (
     <>
       <Card centered >
-        <Dimmer.Dimmable
-          as={Image}
-          dimmed={showDimmer}
-          dimmer={{ active: showDimmer, content }}
-          onMouseEnter={() => handleShow()}
-          onMouseLeave={() => handleHide()}
-          size='medium'
-          src={projectPhoto}
-        />
+        <div onMouseEnter={() => handleShow(name)} onMouseLeave={() => handleHide(name)}>
+          <Dimmer.Dimmable
+            name="project1"
+            as={Image}
+            dimmed={showDimmer}
+            dimmer={{ active: showDimmer, content }}
 
+
+            size='medium'
+            src={projectPhoto}
+          />
+        </div>
         <Card.Content>
           <Card.Header>Project Name</Card.Header>
 
@@ -56,4 +59,4 @@ const SmallEmptyProject = () => {
   )
 }
 
-export default SmallEmptyProject
+export default BuyCartRedux

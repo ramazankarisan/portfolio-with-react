@@ -3,17 +3,19 @@ import homeContext from './homeContext'
 import { sidebarReducer } from './HomeReducer'
 
 const HomeState = (props) => {
-  const [state, dispatch] = useReducer(sidebarReducer, { menuShow: true, active: false });
+  const [state, dispatch] = useReducer(sidebarReducer, { menuShow: true, active: false, project1: '', project2: "", project3: '', project4: "", project5: '', project6: "" });
 
   const handleClick = () => {
     dispatch({ type: 'MENU_OPEN' });
+
   }
 
-  const handleShow = () => {
-    dispatch({ type: 'HANDLE_SHOW' })
+  const handleShow = (name) => {
+    dispatch({ type: 'HANDLE_SHOW', payload: name });
+    console.log(state);
   }
-  const handleHide = () => {
-    dispatch({ type: 'HANDLE_HIDE' })
+  const handleHide = (name) => {
+    dispatch({ type: 'HANDLE_HIDE', payload: name })
   }
   return (
     <homeContext.Provider value={{ state, handleClick, handleShow, handleHide }}>
