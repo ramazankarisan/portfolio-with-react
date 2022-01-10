@@ -1,39 +1,42 @@
-import React from 'react'
-import { Button, Form, Grid, Header, Message, Segment, TextArea } from 'semantic-ui-react'
+import React, { useContext } from 'react'
+import { Button, Form, Grid, Header, Segment, TextArea } from 'semantic-ui-react'
+import languageContext from '../../context/language/LanguageContext';
+import themeContext from '../../context/theme/themeContext';
 
 
 const Contact = () => {
+  const { lang } = useContext(languageContext);
+  const { darkMode } = useContext(themeContext);
+
+
   return (
     <>
-      <Grid stackable className='contactSmall' divided="vertically" >
+      <Grid stackable
+        className={`contactSmall ${darkMode ? 'aboutMe-dark' : ''}`} divided="vertically" >
         <Grid.Row centered textAlign='center'  >
-          <Grid.Column width={8} style={{ 'padding-top': 100 }}><Header textAlign='center' as='h1' style={{ 'font-size': '3rem' }} color='teal'>
-            Contact
+          <Grid.Column width={8} style={{ paddingTop: 100 }}><Header textAlign='center' as='h1' style={{ 'font-size': '3rem' }} color='teal'>
+            {lang.contact}
           </Header>
           </Grid.Column>
         </Grid.Row>
         <Grid.Row centered columns={2} divided>
           <Grid.Column width={6} >
-            <Segment>
-              <Form className=''>
+            <Segment className={darkMode ? 'inverted' : ''}>
+              <Form className={darkMode ? 'inverted' : ''}>
                 <Form.Field>
-                  <label for="fname">First Name</label>
-                  <input name='fname' type="text" placeholder='First Name' />
+                  <label htmlFor="fname">{lang.fname}</label>
+                  <input name='fname' type="text" placeholder={lang.fname} />
                 </Form.Field>
                 <Form.Field>
-                  <label for="email">Your E-mail</label>
-                  <input name='email' type="email" placeholder='john-doe@gmail.com' />
+                  <label htmlFor="email">{lang.email}</label>
+                  <input name='email' type="email" placeholder={lang.email} />
                 </Form.Field>
-                <Message
-                  error
-                  header='Action Forbidden'
-                  content='You can only sign up for an account once with a given e-mail address.'
-                />
+
                 <Form.Field>
-                  <label for="message">Your Message</label>
-                  <TextArea name="message" placeholder='Your message' rows={5} />
+                  <label htmlFor="message">{lang.message}</label>
+                  <TextArea name="message" placeholder={lang.message} rows={5} />
                 </Form.Field>
-                <Button>Submit</Button>
+                <Button>{lang.submit}</Button>
               </Form>
             </Segment>
           </Grid.Column>

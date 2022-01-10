@@ -1,10 +1,15 @@
 import React, { useContext } from 'react'
 import { Button, Card, Dimmer, Header, Icon, Image } from 'semantic-ui-react'
+import languageContext from '../../../context/language/LanguageContext'
 import homeContext from '../../../context/sidebar/homeContext'
+import themeContext from '../../../context/theme/themeContext'
 import projectPhoto from '../../../images/buyCart.png'
 
 const BuyCartRedux = () => {
   const { handleShow, handleHide, state } = useContext(homeContext);
+  const { lang } = useContext(languageContext);
+  const { darkMode } = useContext(themeContext);
+
   const showDimmer = state.project2;
   const name = 'project2'
   const content = (
@@ -18,22 +23,20 @@ const BuyCartRedux = () => {
   )
   return (
     <>
-      <Card centered className='cardProject'  >
+      <Card centered className={`cardProject ${darkMode ? 'back-black' : ''}`}  >
         <div onMouseEnter={() => handleShow(name)} onMouseLeave={() => handleHide(name)}>
           <Dimmer.Dimmable
             name="project1"
             as={Image}
             dimmed={showDimmer}
             dimmer={{ active: showDimmer, content }}
-
-
             size='medium'
             src={projectPhoto}
-            style={{ 'height': 205 }}
+            style={{ 'height': 205, opacity: darkMode ? 0.2 : 1 }}
           />
         </div>
         <Card.Content textAlign="center">
-          <Card.Header >Project Name</Card.Header>
+          <Card.Header className={darkMode ? 'font-white' : ''}  >{lang.projectName}</Card.Header>
 
         </Card.Content>
         <Card.Content extra textAlign='center'>

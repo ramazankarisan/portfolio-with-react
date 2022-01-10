@@ -1,6 +1,5 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { Grid } from 'semantic-ui-react'
-import homeContext from '../context/sidebar/homeContext';
 import AboutMe from './AboutMe';
 import Intro from './Intro';
 
@@ -8,7 +7,6 @@ import Intro from './Intro';
 
 const Home = () => {
 
-  const { state } = useContext(homeContext)
 
   return (
     <>

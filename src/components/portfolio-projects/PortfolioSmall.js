@@ -1,18 +1,23 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { Button, Grid, Header } from 'semantic-ui-react'
+import languageContext from '../../context/language/LanguageContext'
+import themeContext from '../../context/theme/themeContext'
 import CommentListProject from './projects/Project1'
 import BuyCartRedux from './projects/Project2'
-import SmallEmptyProject from './SmallEmptyProject'
+
 
 const PortfolioSmall = () => {
+  const { lang } = useContext(languageContext);
+  const { darkMode } = useContext(themeContext);
+
   return (
     <>
-      <Grid stackable divided="vertically" className='portfolioSmall'>
+      <Grid stackable divided="vertically" className={`portfolioSmall ${darkMode ? 'intro-dark' : ''}`}>
 
         <Grid.Row centered textAlign='center' >
           <Grid.Column width={4}><Header textAlign='center' as='h4' size='huge' color='orange'>
-            My Portfolio
+            {lang.myPortfolio}
           </Header>
           </Grid.Column>
         </Grid.Row>
@@ -29,7 +34,7 @@ const PortfolioSmall = () => {
         </Grid.Row>
 
         <Grid.Row centered>
-          <Link to="/portfolio"> <Button color='orange' size='large'>Click for more!</Button></Link>
+          <Link to="/portfolio"> <Button color='orange' size='large'>{lang.clickForMore}</Button></Link>
         </Grid.Row>
 
       </Grid>

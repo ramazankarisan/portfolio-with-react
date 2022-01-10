@@ -7,7 +7,6 @@ const HomeState = (props) => {
 
   const handleClick = () => {
     dispatch({ type: 'MENU_OPEN' });
-
   }
 
   const handleShow = (name) => {

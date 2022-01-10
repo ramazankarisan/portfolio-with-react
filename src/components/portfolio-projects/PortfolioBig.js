@@ -1,5 +1,7 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Grid, Header } from 'semantic-ui-react'
+import languageContext from '../../context/language/LanguageContext'
+import themeContext from '../../context/theme/themeContext'
 import './Portfolio.scss'
 import CommentListProject from './projects/Project1'
 import BuyCartRedux from './projects/Project2'
@@ -7,15 +9,18 @@ import MovieApiFetch from './projects/Project3'
 import AddPersonEdit from './projects/Project4'
 import ToDoList from './projects/Project5'
 import UserList from './projects/Project6'
-import SmallEmptyProject from './SmallEmptyProject'
+
 
 const PortfolioBig = () => {
+  const { lang } = useContext(languageContext);
+  const { darkMode } = useContext(themeContext);
+
   return (
     <>
-      <Grid stackable className='portfolio' divided="vertically">
+      <Grid stackable className={`portfolio ${darkMode ? 'portfolio-dark' : ''}`} divided="vertically">
         <Grid.Row centered>
-          <Header textAlign='center' as='h4' size='huge' color='blue'>
-            My Portfolio
+          <Header textAlign='center' as='h4' size='huge' className={darkMode ? 'font-white' : 'blue'}>
+            {lang.myPortfolio}
           </Header></Grid.Row>
         <Grid.Row columns={3} centered divided>
           <Grid.Column>

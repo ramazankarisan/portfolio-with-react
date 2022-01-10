@@ -48,6 +48,9 @@
     height: calc(100vh - 40px);
     margin-top: 60px !important;
 }
+.intro-dark {
+    background: rgb(0, 58, 58) !important;
+}
 .headerIntro {
     position: relative;
     top: -50px;
@@ -68,6 +71,9 @@
         rgba(150, 75, 0, 1) 100%
     );
 }
+.aboutMe-dark {
+    background: rgb(97, 48, 0);
+}
 
 // avatar -------------
 .avatarImg {
@@ -76,6 +82,9 @@
 // about me card-------------
 .aboutMeCard {
     padding: 5px !important;
+}
+.aboutMeCard-dark {
+    background: #1b1c1d !important;
 }
 // sercive list --------------
 .serviceList {
@@ -97,6 +106,9 @@
         rgba(0, 112, 112, 1) 61%,
         rgba(1, 89, 89, 1) 100%
     );
+}
+.portfolioSmall-dark {
+    @extend .intro-dark;
 }
 // card -------------
 .cardProject {
@@ -123,7 +135,7 @@
 }
 // top button-----------
 .top-button {
-    width: 50px;
+    width: 60px;
     height: 50px;
     border-radius: 50%;
     background: rgba(8, 8, 8, 0.5);
@@ -131,6 +143,7 @@
     position: fixed;
     bottom: 1%;
     right: 1%;
+    z-index: 2;
     transition: transform 0.5s linear;
     &:hover {
         transform: rotate(360deg);
@@ -150,4 +163,25 @@
     }
 }
 
-//
+//checkbox------
+.checkbox {
+    color: inherit;
+    @include centerIt($dir: column);
+    div {
+        padding-bottom: 3px;
+    }
+}
+
+// darkTheme fixed classes-------
+.back-white {
+    background: white;
+}
+.back-black {
+    background: #1b1c1d !important;
+}
+.font-white {
+    color: white !important;
+}
+.white-border {
+    border: solid white 1px !important;
+}

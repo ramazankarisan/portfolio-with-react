@@ -1,15 +1,16 @@
-import { faChevronCircleUp, faChevronUp } from '@fortawesome/free-solid-svg-icons'
+import { faChevronUp } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React from 'react'
-import { Icon, Label, Segment } from 'semantic-ui-react'
+import React, { useContext } from 'react'
+import languageContext from '../context/language/LanguageContext'
 
 const TopBtn = () => {
+  const { lang } = useContext(languageContext);
   return (
     <>
-      <div class="top-button">
+      <div className="top-button">
         <a href="#home">
           <FontAwesomeIcon icon={faChevronUp} />
-          <p>top</p>
+          <p>{lang.top}</p>
         </a>
       </div>
     </>

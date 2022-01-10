@@ -1,17 +1,18 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useContext } from 'react'
 import { Button, Grid, Icon, Segment } from 'semantic-ui-react'
+import themeContext from '../context/theme/themeContext';
 
 const Footer = () => {
+  const { darkMode } = useContext(themeContext);
 
   return (
     <>
       <Grid stackable centered >
-        <Grid.Row centered>
+        <Grid.Row centered color={darkMode ? 'grey' : null}>
           <Grid.Column width={8} textAlign='center'>
-            <Segment >
+            <Segment className={darkMode ? 'inverted' : ""}>
               <a href="https://github.com/ramazankarisan" target='_blank' rel="noreferrer" >
-                <Button className='btn github' color='black' size='tiny' >
+                <Button className='btn github white-border' color='black' size='tiny'  >
                   <Icon name='github' /> GitHub
                 </Button>
               </a>
