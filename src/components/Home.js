@@ -3,7 +3,7 @@ import { Grid } from 'semantic-ui-react'
 import homeContext from '../context/sidebar/homeContext';
 import AboutMe from './AboutMe';
 import Intro from './Intro';
-import MenuHome from './MenuHome';
+
 
 
 const Home = () => {
@@ -15,7 +15,7 @@ const Home = () => {
       <Grid stackable  >
         <Grid.Row  >
           <Grid.Column  >
-            <MenuHome />
+
             <Intro />
             <AboutMe />
 

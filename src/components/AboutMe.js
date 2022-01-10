@@ -9,7 +9,7 @@ const AboutMe = () => {
       <Grid className='aboutMe' stackable>
         <Grid.Row centered>
           <Grid.Column width={5}>
-            <Card className='aboutMeCard'>
+            <Card className='aboutMeCard' id="aboutMe">
               <Image src={avatar} className='avatarImg' size="medium" />
               <Card.Content>
                 <Card.Header>Ramazan Karisan </Card.Header>

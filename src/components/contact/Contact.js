@@ -1,14 +1,13 @@
 import React from 'react'
 import { Button, Form, Grid, Header, Message, Segment, TextArea } from 'semantic-ui-react'
 
-const ContactSmall = () => {
 
-  const error = true
+const Contact = () => {
   return (
     <>
       <Grid stackable className='contactSmall' divided="vertically" >
         <Grid.Row centered textAlign='center'  >
-          <Grid.Column width={8} style={{ 'padding-top': 40 }}><Header textAlign='center' as='h1' style={{ 'font-size': '3rem' }} color='teal'>
+          <Grid.Column width={8} style={{ 'padding-top': 100 }}><Header textAlign='center' as='h1' style={{ 'font-size': '3rem' }} color='teal'>
             Contact
           </Header>
           </Grid.Column>
@@ -45,4 +44,4 @@ const ContactSmall = () => {
   )
 }
 
-export default ContactSmall
+export default Contact

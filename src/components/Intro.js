@@ -8,7 +8,7 @@ import homeImg from '../images/programming.svg'
 const Intro = () => {
   return (
     <>
-      <Grid className='intro' >
+      <Grid className='intro' id="landingPage" >
         <Grid.Row className='homeImg' centered>
           <Grid.Column width={4}>
             <Image src={homeImg} circular size='massive'></Image>
@@ -20,8 +20,8 @@ const Intro = () => {
               <h1>Ramazan Karisan</h1>
               <h3>Web Developer</h3>
             </div>
-            <div className='ui grid centered'><Link to="/" ><FontAwesomeIcon icon={faAngleDoubleDown} size="5x"
-            /></Link></div>
+            <div className='ui grid centered'><a href="#aboutMe" ><FontAwesomeIcon icon={faAngleDoubleDown} size="5x"
+            /></a></div>
           </Grid.Column>
         </Grid.Row>
       </Grid>
