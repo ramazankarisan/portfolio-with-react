@@ -12,31 +12,29 @@ const CommentListProject = () => {
 
   const showDimmer = { active: state.project1 }
   const { active } = showDimmer;
-
-
   const name = 'project1'
-  const content = (
-    <div>
-      <Header as='h2' inverted>
-        Project Name
-      </Header>
 
-      <p>Details...</p>
-    </div>
-  )
   return (
     <>
       <Card centered className={`cardProject ${darkMode ? 'back-black' : ''}`}  >
+
         <div onMouseEnter={() => handleShow(name)} onMouseLeave={() => handleHide(name)}>
           <Dimmer.Dimmable
-            name="project1"
             as={Image}
-            dimmed={showDimmer}
-            dimmer={{ active, content }}
-            size='medium'
-            src={projectPhoto}
+            dimmed={active}
             style={{ opacity: darkMode ? 0.2 : 1 }}
-          />
+          >
+            <Image size="medium" src={projectPhoto} />
+            <Dimmer active={active}>
+              <div>
+                <Header as='h2' inverted>
+                  Project Name
+                </Header>
+
+                <p>Details...</p>
+              </div>
+            </Dimmer>
+          </Dimmer.Dimmable>
         </div>
 
         <Card.Content textAlign="center" >

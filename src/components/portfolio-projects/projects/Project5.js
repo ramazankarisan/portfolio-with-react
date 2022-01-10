@@ -10,28 +10,27 @@ const ToDoList = () => {
 
   const active = state.project5;
   const name = 'project5'
-  const content = (
-    <div  >
-      <Header as='h2' inverted >
-        Project Name
-      </Header>
 
-      <p>Details...</p>
-    </div>
-  )
   return (
     <>
       <Card centered className={darkMode ? 'back-black' : ''} >
         <div onMouseEnter={() => handleShow(name)} onMouseLeave={() => handleHide(name)}>
           <Dimmer.Dimmable
-            name="project1"
             as={Image}
             dimmed={active}
-            dimmer={{ active, content }}
-            size='medium'
-            src={projectPhoto}
             style={{ opacity: darkMode ? 0.2 : 1 }}
-          />
+          >
+            <Image size="medium" src={projectPhoto} />
+            <Dimmer active={active}>
+              <div>
+                <Header as='h2' inverted>
+                  Project Name...
+                </Header>
+
+                <p>Details...</p>
+              </div>
+            </Dimmer>
+          </Dimmer.Dimmable>
         </div>
         <Card.Content textAlign="center">
           <Card.Header className={darkMode ? 'font-white' : ''}>Project Name</Card.Header>

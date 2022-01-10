@@ -14,7 +14,7 @@ const ContactSmall = () => {
         className={`contactSmall ${darkMode ? 'aboutMe-dark' : ''}`}
         divided="vertically" >
         <Grid.Row centered textAlign='center'  >
-          <Grid.Column width={8} style={{ 'padding-top': 40 }}><Header textAlign='center' as='h1' style={{ fontSize: '3rem' }} color='teal'>
+          <Grid.Column width={8} style={{ paddingTop: 40 }}><Header textAlign='center' as='h1' style={{ fontSize: '3rem' }} color='teal'>
             {lang.contact}
           </Header>
           </Grid.Column>
