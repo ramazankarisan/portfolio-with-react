@@ -31,7 +31,7 @@ const AddPersonEdit = () => {
             src={projectPhoto}
           />
         </div>
-        <Card.Content>
+        <Card.Content textAlign="center">
           <Card.Header>Project Name</Card.Header>
 
         </Card.Content>
@@ -40,16 +40,16 @@ const AddPersonEdit = () => {
           <Button.Group >
             <Button animated positive>
               <Button.Content visible>Live Demo</Button.Content>
-              <Button.Content hidden>
+              <a href='https://person-add-edit.netlify.app/' target='_blank' rel="noreferrer"><Button.Content hidden>
                 <Icon name='arrow right' />
-              </Button.Content>
+              </Button.Content></a>
             </Button>
             <Button.Or />
             <Button animated color="orange">
               <Button.Content visible>GitHub</Button.Content>
-              <Button.Content hidden>
+              <a href='https://github.com/ramazankarisan/person-add-edit' target='_blank' rel="noreferrer"> <Button.Content hidden>
                 <Icon name='arrow right' />
-              </Button.Content>
+              </Button.Content></a>
             </Button>
           </Button.Group>
 

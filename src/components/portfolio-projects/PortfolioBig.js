@@ -12,12 +12,12 @@ import SmallEmptyProject from './SmallEmptyProject'
 const PortfolioBig = () => {
   return (
     <>
-      <Grid stackable className='portfolio'>
+      <Grid stackable className='portfolio' divided="vertically">
         <Grid.Row centered>
           <Header textAlign='center' as='h4' size='huge' color='blue'>
             My Portfolio
           </Header></Grid.Row>
-        <Grid.Row columns={3} centered>
+        <Grid.Row columns={3} centered divided>
           <Grid.Column>
 
             <CommentListProject />
@@ -31,7 +31,7 @@ const PortfolioBig = () => {
             <MovieApiFetch />
           </Grid.Column>
         </Grid.Row>
-        <Grid.Row columns={3} centered>
+        <Grid.Row columns={3} centered divided>
           <Grid.Column>
 
             <AddPersonEdit />

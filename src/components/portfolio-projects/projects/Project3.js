@@ -18,7 +18,7 @@ const MovieApiFetch = () => {
   )
   return (
     <>
-      <Card centered >
+      <Card centered className='cardProject' >
         <div onMouseEnter={() => handleShow(name)} onMouseLeave={() => handleHide(name)}>
           <Dimmer.Dimmable
             name="project1"
@@ -29,9 +29,10 @@ const MovieApiFetch = () => {
 
             size='medium'
             src={projectPhoto}
+            style={{ 'height': 205 }}
           />
         </div>
-        <Card.Content>
+        <Card.Content textAlign="center">
           <Card.Header>Project Name</Card.Header>
 
         </Card.Content>
@@ -40,16 +41,17 @@ const MovieApiFetch = () => {
           <Button.Group >
             <Button animated positive>
               <Button.Content visible>Live Demo</Button.Content>
-              <Button.Content hidden>
-                <Icon name='arrow right' />
-              </Button.Content>
+              <a href='https://movie-api-fetch.netlify.app/' target='_blank' rel="noreferrer">
+                <Button.Content hidden>
+                  <Icon name='arrow right' />
+                </Button.Content></a >
             </Button>
             <Button.Or />
             <Button animated color="orange">
               <Button.Content visible>GitHub</Button.Content>
-              <Button.Content hidden>
+              <a href='https://github.com/ramazankarisan/movie-api-fetch' target='_blank' rel="noreferrer"><Button.Content hidden>
                 <Icon name='arrow right' />
-              </Button.Content>
+              </Button.Content></a>
             </Button>
           </Button.Group>
 

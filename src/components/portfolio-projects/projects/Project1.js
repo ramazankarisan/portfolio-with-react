@@ -18,7 +18,7 @@ const CommentListProject = () => {
   )
   return (
     <>
-      <Card centered >
+      <Card centered className='cardProject' >
         <div onMouseEnter={() => handleShow(name)} onMouseLeave={() => handleHide(name)}>
           <Dimmer.Dimmable
             name="project1"
@@ -31,7 +31,7 @@ const CommentListProject = () => {
             src={projectPhoto}
           />
         </div>
-        <Card.Content>
+        <Card.Content textAlign="center">
           <Card.Header>Project Name</Card.Header>
 
         </Card.Content>
@@ -40,16 +40,16 @@ const CommentListProject = () => {
           <Button.Group >
             <Button animated positive>
               <Button.Content visible>Live Demo</Button.Content>
-              <Button.Content hidden>
+              <a href='https://post-commentlist.netlify.app/' target='_blank' rel="noreferrer"> <Button.Content hidden>
                 <Icon name='arrow right' />
-              </Button.Content>
+              </Button.Content></a>
             </Button>
             <Button.Or />
             <Button animated color="orange">
               <Button.Content visible>GitHub</Button.Content>
-              <Button.Content hidden>
+              <a href='https://github.com/ramazankarisan/commentList' target='_blank' rel="noreferrer"><Button.Content hidden>
                 <Icon name='arrow right' />
-              </Button.Content>
+              </Button.Content></a>
             </Button>
           </Button.Group>
 

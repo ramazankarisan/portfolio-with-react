@@ -18,7 +18,7 @@ const BuyCartRedux = () => {
   )
   return (
     <>
-      <Card centered >
+      <Card centered className='cardProject'  >
         <div onMouseEnter={() => handleShow(name)} onMouseLeave={() => handleHide(name)}>
           <Dimmer.Dimmable
             name="project1"
@@ -29,10 +29,11 @@ const BuyCartRedux = () => {
 
             size='medium'
             src={projectPhoto}
+            style={{ 'height': 205 }}
           />
         </div>
-        <Card.Content>
-          <Card.Header>Project Name</Card.Header>
+        <Card.Content textAlign="center">
+          <Card.Header >Project Name</Card.Header>
 
         </Card.Content>
         <Card.Content extra textAlign='center'>
@@ -40,16 +41,16 @@ const BuyCartRedux = () => {
           <Button.Group >
             <Button animated positive>
               <Button.Content visible>Live Demo</Button.Content>
-              <Button.Content hidden>
+              <a href='https://buycart-redux.netlify.app/' target='_blank' rel="noreferrer"><Button.Content hidden>
                 <Icon name='arrow right' />
-              </Button.Content>
+              </Button.Content></a>
             </Button>
             <Button.Or />
             <Button animated color="orange">
               <Button.Content visible>GitHub</Button.Content>
-              <Button.Content hidden>
+              <a href='https://github.com/ramazankarisan/buyCart-redux' target='_blank' rel="noreferrer"><Button.Content hidden></Button.Content><Button.Content hidden>
                 <Icon name='arrow right' />
-              </Button.Content>
+              </Button.Content></a>
             </Button>
           </Button.Group>
 
