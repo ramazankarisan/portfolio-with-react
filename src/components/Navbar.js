@@ -26,8 +26,15 @@ const Navbar = () => {
                 </Button>
               </Menu.Item>
 
+              <Menu.Item ><Link to="/">
+
+                <Button circular icon="home" color='yellow' size='big' >
+
+                </Button></Link>
+              </Menu.Item>
+
               <Menu.Item>
-                <Link to="/contact"><Button positive>{lang.hireMe}</Button>
+                <Link to="/contact" ><Button positive>{lang.hireMe}</Button>
                 </Link>
               </Menu.Item>
               <Menu.Menu position='right'>
