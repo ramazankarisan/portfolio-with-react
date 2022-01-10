@@ -10,7 +10,7 @@ const BuyCartRedux = () => {
   const { lang } = useContext(languageContext);
   const { darkMode } = useContext(themeContext);
 
-  const showDimmer = state.project2;
+  const active = state.project2;
   const name = 'project2'
   const content = (
     <div>
@@ -28,8 +28,8 @@ const BuyCartRedux = () => {
           <Dimmer.Dimmable
             name="project1"
             as={Image}
-            dimmed={showDimmer}
-            dimmer={{ active: showDimmer, content }}
+            dimmed={active}
+            dimmer={{ active, content }}
             size='medium'
             src={projectPhoto}
             style={{ 'height': 205, opacity: darkMode ? 0.2 : 1 }}

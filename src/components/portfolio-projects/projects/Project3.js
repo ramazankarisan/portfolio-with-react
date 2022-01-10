@@ -8,7 +8,7 @@ const MovieApiFetch = () => {
   const { handleShow, handleHide, state } = useContext(homeContext);
   const { darkMode } = useContext(themeContext);
 
-  const showDimmer = state.project3;
+  const active = state.project3;
   const name = 'project3'
   const content = (
     <div>
@@ -26,8 +26,8 @@ const MovieApiFetch = () => {
           <Dimmer.Dimmable
             name="project1"
             as={Image}
-            dimmed={showDimmer}
-            dimmer={{ active: showDimmer, content }}
+            dimmed={active}
+            dimmer={{ active, content }}
             size='medium'
             src={projectPhoto}
             style={{ 'height': 205, opacity: darkMode ? 0.2 : 1 }}

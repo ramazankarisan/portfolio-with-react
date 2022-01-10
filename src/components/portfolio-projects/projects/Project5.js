@@ -8,7 +8,7 @@ const ToDoList = () => {
   const { handleShow, handleHide, state } = useContext(homeContext);
   const { darkMode } = useContext(themeContext);
 
-  const showDimmer = state.project5;
+  const active = state.project5;
   const name = 'project5'
   const content = (
     <div  >
@@ -26,8 +26,8 @@ const ToDoList = () => {
           <Dimmer.Dimmable
             name="project1"
             as={Image}
-            dimmed={showDimmer}
-            dimmer={{ active: showDimmer, content }}
+            dimmed={active}
+            dimmer={{ active, content }}
             size='medium'
             src={projectPhoto}
             style={{ opacity: darkMode ? 0.2 : 1 }}

@@ -10,7 +10,10 @@ const CommentListProject = () => {
   const { lang } = useContext(languageContext);
   const { darkMode } = useContext(themeContext);
 
-  const showDimmer = state.project1;
+  const showDimmer = { active: state.project1 }
+  const { active } = showDimmer;
+
+
   const name = 'project1'
   const content = (
     <div>
@@ -29,12 +32,13 @@ const CommentListProject = () => {
             name="project1"
             as={Image}
             dimmed={showDimmer}
-            dimmer={{ active: showDimmer, content }}
+            dimmer={{ active, content }}
             size='medium'
             src={projectPhoto}
             style={{ opacity: darkMode ? 0.2 : 1 }}
           />
         </div>
+
         <Card.Content textAlign="center" >
           <Card.Header className={darkMode ? 'font-white' : ''}  >{lang.projectName}</Card.Header>
 
