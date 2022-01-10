@@ -12,7 +12,7 @@ const HomeState = (props) => {
 
   const handleShow = (name) => {
     dispatch({ type: 'HANDLE_SHOW', payload: name });
-    console.log(state);
+
   }
   const handleHide = (name) => {
     dispatch({ type: 'HANDLE_HIDE', payload: name })
