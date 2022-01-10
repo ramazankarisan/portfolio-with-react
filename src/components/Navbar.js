@@ -15,30 +15,30 @@ const Navbar = () => {
 
   return (
     <>
-      <Grid stackable id="home">
+      <Grid stackable id="home" className='navbar'>
         <Grid.Row centered className='navbarCont ' color={darkMode ? 'black' : null} >
           <Grid.Column mobile={16} computer={10}  >
-            <Menu className={`fixedMenu ${darkMode ? 'back-black' : null} `}   >
-              <Menu.Item>
+            <Menu className={`fixedMenu  ${darkMode ? 'back-black' : 'null'} `}   >
+              <Menu.Item className='menuItemList'>
 
                 <Button onClick={() => handleClick()} circular icon="list layout" color='teal' size='big' >
 
                 </Button>
               </Menu.Item>
 
-              <Menu.Item ><Link to="/">
+              <Menu.Item className='menuItemList' ><Link to="/">
 
-                <Button circular icon="home" color='yellow' size='big' >
+                <Button circular icon="home" color='yellow' size='small' >
 
                 </Button></Link>
               </Menu.Item>
 
-              <Menu.Item>
+              <Menu.Item className='menuItem'>
                 <Link to="/contact" ><Button positive>{lang.hireMe}</Button>
                 </Link>
               </Menu.Item>
               <Menu.Menu position='right'>
-                <Menu.Item className='checkbox'>
+                <Menu.Item className='checkbox menuItem'>
 
                   <div className={` ${darkMode ? 'font-white' : ''}`} > {lang.theme}</div>
                   <Checkbox toggle onChange={(e, { checked }) => handleTheme(checked)} />

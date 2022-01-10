@@ -8,6 +8,35 @@
     width: inherit;
     z-index: 101;
     height: 60px !important;
+    @media screen and (max-width: 520px) {
+        margin-left: -10px !important;
+    }
+    .menuItemList {
+        @media screen and (max-width: 520px) {
+            font-size: 0.6rem !important;
+            width: 50px !important;
+        }
+    }
+    .menuItem {
+        @media screen and (max-width: 520px) {
+            font-size: 0.6rem !important;
+            width: 80px !important;
+            button {
+                height: 40px !important;
+                width: 50px;
+                text-align: right;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+}
+.menuItemSelect {
+    @media screen and (max-width: 520px) {
+        font-size: 0.6rem !important;
+        width: 20px !important;
+    }
 }
 .navbarCont {
     background: whitesmoke;
@@ -17,7 +46,17 @@
     left: 0;
     right: 0;
     z-index: 101;
+    // @media screen and (max-width: 520px) {
+    //     font-size: 0.5rem;
+    // }
 }
+
+// @media only screen and (max-width: 520px) {
+//     .navbar {
+//         font-size: 0.5rem;
+//     }
+// }
+
 // menuHome fixed
 .menuHome {
     position: fixed;
@@ -30,6 +69,10 @@
 // Select language ---------
 .selectLanguage {
     width: 100px;
+    @media screen and(max-width:520px) {
+        width: 70px;
+        font-size: 0.7rem;
+    }
 }
 // home-intro img --------------------------------------
 .homeImg {
