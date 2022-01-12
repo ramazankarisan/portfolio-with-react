@@ -19,7 +19,7 @@ const PortfolioBig = () => {
     <>
       <Grid stackable className={`portfolio ${darkMode ? 'portfolio-dark' : ''}`} divided="vertically">
         <Grid.Row centered>
-          <Header textAlign='center' as='h4' size='huge' className={darkMode ? 'font-white' : 'blue'}>
+          <Header style={{ fontSize: "5rem" }} textAlign='center' as='h1' size='huge' className={darkMode ? 'font-white' : 'blue'}>
             {lang.myPortfolio}
           </Header></Grid.Row>
         <Grid.Row columns={3} centered divided>

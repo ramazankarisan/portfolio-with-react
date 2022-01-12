@@ -13,8 +13,17 @@
     }
     .menuItemList {
         @media screen and (max-width: 520px) {
-            font-size: 0.6rem !important;
+            font-size: 0.7rem !important;
             width: 50px !important;
+        }
+        button {
+            @media screen and (max-width: 520px) {
+                width: 30px;
+                height: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
         }
     }
     .menuItem {
@@ -61,14 +70,16 @@
 .menuHome {
     position: fixed;
     top: 40%;
-    width: 120px !important;
+    width: fit-content !important;
     outline: solid red 2px;
     z-index: 101;
+    font-size: 1.5rem !important;
 }
 
 // Select language ---------
 .selectLanguage {
     width: 100px;
+
     @media screen and(max-width:520px) {
         width: 70px;
         font-size: 0.7rem;
@@ -98,6 +109,16 @@
 .headerIntro {
     position: relative;
     top: -50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+    h1 {
+        font-size: 4rem;
+    }
+    h3 {
+        font-size: 3rem;
+    }
 }
 .fa-angle-double-down {
     color: #e3f2fd;
@@ -126,9 +147,16 @@
 // about me card-------------
 .aboutMeCard {
     padding: 5px !important;
+    font-size: 1.4rem;
 }
 .aboutMeCard-dark {
     background: #1b1c1d !important;
+}
+// skillsAndService-----------
+.skillsAndService {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: space-evenly !important;
 }
 // sercive list --------------
 .serviceList {
@@ -150,20 +178,48 @@
         rgba(0, 112, 112, 1) 61%,
         rgba(1, 89, 89, 1) 100%
     );
+    font-size: 1.5rem;
 }
 .portfolioSmall-dark {
     @extend .intro-dark;
 }
 // card -------------
 .cardProject {
-    height: 320px;
+    height: auto;
+    font-size: 1.7rem;
 }
 // contact small ----
 .contactSmall {
     @extend .aboutMe;
 }
+.contactHeader {
+    @media screen and (max-width: 520px) {
+        padding-top: 200px !important;
 
+        position: relative;
+        top: 55px;
+    }
+}
+.contactForm {
+    font-size: 2rem !important;
+    .field {
+        label {
+            margin: 20px 0px !important;
+        }
+    }
+}
 // footer---------
+.footerDiv {
+    font-size: 1.6rem !important;
+
+    a {
+        margin: 5px;
+    }
+    button {
+        margin: 5px !important;
+        width: 150px;
+    }
+}
 .btn:hover {
     transition: transform 0.4s linear !important;
     transform: scale(1.2);
@@ -213,6 +269,7 @@
     @include centerIt($dir: column);
     div {
         padding-bottom: 3px;
+        font-size: 1.2rem;
     }
 }
 

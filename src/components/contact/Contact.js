@@ -14,15 +14,16 @@ const Contact = () => {
       <Grid stackable
         className={`contactSmall ${darkMode ? 'aboutMe-dark' : ''}`} divided="vertically" >
         <Grid.Row centered textAlign='center'  >
-          <Grid.Column width={8} style={{ paddingTop: 100 }}><Header textAlign='center' as='h1' style={{ 'font-size': '3rem' }} color='teal'>
-            {lang.contact}
-          </Header>
+          <Grid.Column className='contactHeader' width={8} style={{ paddingTop: 100 }}>
+            <Header textAlign='center' as='h1' style={{ 'font-size': '5rem' }} color='teal'>
+              {lang.contact}
+            </Header>
           </Grid.Column>
         </Grid.Row>
         <Grid.Row centered columns={2} divided>
           <Grid.Column width={6} >
             <Segment className={darkMode ? 'inverted' : ''}>
-              <Form className={darkMode ? 'inverted' : ''}>
+              <Form className={`contactForm ${darkMode ? 'inverted' : ''}`}>
                 <Form.Field>
                   <label htmlFor="fname">{lang.fname}</label>
                   <input name='fname' type="text" placeholder={lang.fname} />

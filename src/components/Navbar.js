@@ -28,7 +28,7 @@ const Navbar = () => {
 
               <Menu.Item className='menuItemList' ><Link to="/">
 
-                <Button circular icon="home" color='yellow' size='small' >
+                <Button circular icon="home" color='yellow' size='big' >
 
                 </Button></Link>
               </Menu.Item>
@@ -42,7 +42,7 @@ const Navbar = () => {
 
                   <div className={` ${darkMode ? 'font-white' : ''}`} > {lang.theme}</div>
                   <Checkbox toggle onChange={(e, { checked }) => handleTheme(checked)} />
-                  {/* <Button primary>Sign Up</Button> */}
+
                 </Menu.Item>
                 <Menu.Item >
                   <DropdownLanguage />

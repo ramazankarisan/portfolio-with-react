@@ -43,7 +43,7 @@ const CommentListProject = () => {
         </Card.Content>
         <Card.Content extra textAlign='center'>
 
-          <Button.Group >
+          <Button.Group size="large" >
             <Button animated positive>
               <Button.Content visible>Live Demo</Button.Content>
               <a href='https://post-commentlist.netlify.app/' target='_blank' rel="noreferrer"> <Button.Content hidden>

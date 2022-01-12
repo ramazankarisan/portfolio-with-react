@@ -16,9 +16,10 @@ const PortfolioSmall = () => {
       <Grid stackable divided="vertically" className={`portfolioSmall ${darkMode ? 'intro-dark' : ''}`}>
 
         <Grid.Row centered textAlign='center' >
-          <Grid.Column width={4}><Header textAlign='center' as='h4' size='huge' color='orange'>
-            {lang.myPortfolio}
-          </Header>
+          <Grid.Column width={4}>
+            <Header textAlign='center' as='h4' size='huge' color='orange'>
+              {lang.myPortfolio}
+            </Header>
           </Grid.Column>
         </Grid.Row>
 
@@ -34,7 +35,7 @@ const PortfolioSmall = () => {
         </Grid.Row>
 
         <Grid.Row centered>
-          <Link to="/portfolio"> <Button color='orange' size='large'>{lang.clickForMore}</Button></Link>
+          <Link to="/portfolio"> <Button color='orange' size='huge'>{lang.clickForMore}</Button></Link>
         </Grid.Row>
 
       </Grid>

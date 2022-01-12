@@ -33,7 +33,7 @@ const AboutMe = () => {
               </Card.Content>
             </Card>
           </Grid.Column>
-          <Grid.Column width={6} >
+          <Grid.Column width={6} className='skillsAndService' >
 
             <Segment className={` ${darkMode ? 'back-black white-border ' : ''}`} >
               <Header as='h2' textAlign='center' color='teal'>

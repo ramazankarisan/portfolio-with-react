@@ -38,7 +38,7 @@ const MovieApiFetch = () => {
         </Card.Content>
         <Card.Content extra textAlign='center'>
 
-          <Button.Group >
+          <Button.Group size="large" >
             <Button animated positive>
               <Button.Content visible>Live Demo</Button.Content>
               <a href='https://movie-api-fetch.netlify.app/' target='_blank' rel="noreferrer">

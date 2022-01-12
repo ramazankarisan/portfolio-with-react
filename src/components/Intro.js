@@ -20,7 +20,7 @@ const Intro = () => {
         </Grid.Row>
         <Grid.Row centered >
           <Grid.Column width={4}  >
-            <div className='ui grid centered headerIntro' >
+            <div className='  headerIntro' >
               <h1 className={` ${darkMode ? 'font-white' : ''}`}>Ramazan Karisan</h1>
               <h3 className={` ${darkMode ? 'font-white' : ''}`}>{lang.webDeveloper}</h3>
             </div>
